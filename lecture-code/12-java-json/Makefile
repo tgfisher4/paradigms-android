@@ -1,11 +1,11 @@
 all: single
 
-prJSONfromURL.class: /usr/bin/java prJSONfromURL.java
-	@export CLASSPATH=.:./org-json-simple.jar || setenv CLASSPATH ".:./org-json-simple.jar" && javac prJSONfromURL.java
+prJSONRead.class: /usr/bin/java prJSONRead.java
+	@export CLASSPATH=.:./org-json-simple.jar || setenv CLASSPATH ".:./org-json-simple.jar" && javac prJSONRead.java
 
 
-single: prJSONfromURL.class
-	@export CLASSPATH=.:./org-json-simple.jar || setenv CLASSPATH ".:./org-json-simple.jar" && java prJSONfromURL
+single: prJSONRead.class
+	@export CLASSPATH=.:./org-json-simple.jar || setenv CLASSPATH ".:./org-json-simple.jar" && java prJSONRead
 
 
 clean:
