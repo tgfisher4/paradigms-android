@@ -1,9 +1,9 @@
 import java.io.*;
 import java.util.Scanner;
-import org.json.simple.*; // this import is happening from a local file called org.json.jar
+import org.json.simple.*; // this import is happening from a local file called org.json.jar remember to have the file in the folder
 import org.json.simple.parser.*;
 
-// Note: some parts of this program can be taken from Daily1
+// Note: some parts of this program can be taken from the previous Daily
 
 class Movie {
     //TODO class definition
