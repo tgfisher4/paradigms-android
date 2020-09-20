@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shreyakumar.lecture01_fall20_simpleapp">
+    package="com.example.shreyakumar.pr_fall20_simple">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
