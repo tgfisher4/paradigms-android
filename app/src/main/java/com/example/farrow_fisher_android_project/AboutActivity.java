@@ -27,8 +27,8 @@ public class AboutActivity extends AppCompatActivity {
                 openWeb = (Button)findViewById(R.id.open_webpage);
                 openMap = (Button)findViewById(R.id.open_map);
 
-                final String urlStr = "https://www.nd.edu";
-                final String addressStr = "University of Notre Dame, IN";
+                final String urlStr = "https://en.wikipedia.org/wiki/Led_Zeppelin";
+                final String addressStr = "Heston, Middlesex, England";
 
                 openWeb.setOnClickListener(
                         new View.OnClickListener(){

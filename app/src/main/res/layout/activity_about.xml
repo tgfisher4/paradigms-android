@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16px"
+    android:paddingRight="16px"
+    android:paddingTop="16px"
+    android:paddingBottom="16px"
     tools:context=".AboutActivity">
 
     <TextView
@@ -11,12 +15,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/about_text"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="About my app"/>
+        android:text="Some info about Led Zeppelin and their lead guitarist"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="open webpage"
+        android:text="About Led Zeppelin"
         android:id="@+id/open_webpage"
         app:layout_constraintTop_toBottomOf="@id/about_text"
         />
@@ -24,7 +28,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Map"
+        android:text="Guitarist Jimmy Page's Hometown"
         android:id="@+id/open_map"
         app:layout_constraintTop_toBottomOf="@id/open_webpage"
         />
