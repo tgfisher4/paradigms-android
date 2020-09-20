@@ -7,12 +7,54 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/my_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Ryan and Graham's Android Project" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_query"
+        app:layout_constraintTop_toBottomOf="@id/my_title"
+        />
+
+    <Button
+        android:id="@+id/my_search"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Search"
+        app:layout_constraintTop_toBottomOf="@id/my_query"
+        />
+
+    <Button
+        android:id="@+id/my_clear"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Clear"
+        app:layout_constraintTop_toBottomOf="@id/my_search"
+        />
+
+    <TextView
+        android:id="@+id/my_list_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/my_clear"
+        android:text="" />
+
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/my_list_info">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default List"
+            android:id="@+id/my_list"
+            app:layout_constraintTop_toBottomOf="@id/my_clear"
+            />
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

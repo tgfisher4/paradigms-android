@@ -12,6 +12,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class NetworkUtils {
@@ -46,8 +47,10 @@ public class NetworkUtils {
         return null;
     }
 
-    public static ArrayList<String> parseSongsJSON(String songsResponse){
-        ArrayList<String> songList = new ArrayList<>();
+    // use a set instead of an array list since a song may appear multiple times in this list
+    //  - for example, the same song can be on multiple albums
+    public static HashSet<String> parseSongsJSON(String songsResponse){
+        HashSet<String> songSet = new HashSet<>();
         try{
             JSONObject songsResObj = new JSONObject(songsResponse);
             JSONArray allSongsArr = songsResObj.getJSONArray("results");
@@ -55,7 +58,7 @@ public class NetworkUtils {
                 JSONObject song = allSongsArr.getJSONObject(i);
                 if(song.has("trackName")){
                     String name = song.getString("trackName");
-                    songList.add(name);
+                    songSet.add(name);
                 }
             }
         }catch (JSONException e){
@@ -64,7 +67,7 @@ public class NetworkUtils {
             System.out.println("JSON parsing error");
         }
 
-        return songList;
+        return songSet;
     }
 
 }
